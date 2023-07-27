@@ -3,6 +3,15 @@ server:
 spring:
   application:
     name: gateway-msf
+  cloud: 
+    gateway:
+      routes:
+        - id: client-msf
+          uri: lb://client-msf
+          predicates:
+            - Path=/api/client/**
+          filters:
+            - StripPrefix=2
 eureka:
   client:
     serviceUrl:
