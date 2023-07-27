@@ -1,0 +1,21 @@
+server:
+  port: 8080
+management:
+  server:
+    port: 9001
+    address: 127.0.0.1
+spring:
+  application:
+    name: client-msf
+  data:
+    mongodb:
+      url: mongodb://localhost:27017
+      database: client_bd
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90

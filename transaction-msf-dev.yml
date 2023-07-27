@@ -1,0 +1,21 @@
+server:
+  port: 8083
+management:
+  server:
+    port: 9004
+    address: 127.0.0.1
+spring:
+  application:
+    name: transaction-msf
+  data:
+    mongodb:
+      url: mongodb://localhost:27017
+      database: transaction_bd
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90

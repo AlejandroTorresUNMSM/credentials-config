@@ -1,0 +1,21 @@
+server:
+  port: 8082
+management:
+  server:
+    port: 9003
+    address: 127.0.0.1
+spring:
+  application:
+    name: credit-msf
+  data:
+    mongodb:
+      url: mongodb://localhost:27017
+      database: credit_bd
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 90
