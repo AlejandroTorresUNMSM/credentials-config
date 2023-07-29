@@ -3,7 +3,9 @@ server:
 management:
   server:
     port: 9005
-    address: 127.0.0.1
+  endpoints:
+    web:
+      basePath: /actuator/info
 spring:
   application:
     name: debit-msf
@@ -16,6 +18,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
   instance:
-    hostname: localhost
+    preferIpAddress: true
+    hostname: host.docker.internal
     leaseRenewalIntervalInSeconds: 30
     leaseExpirationDurationInSeconds: 90
