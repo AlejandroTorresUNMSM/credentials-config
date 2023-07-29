@@ -3,9 +3,9 @@ server:
 management:
   server:
     port: 9001
-    endpoints:
-      web:
-        basePath: /actuator/info
+  endpoints:
+    web:
+      basePath: /actuator/info
 spring:
   application:
     name: client-msf
